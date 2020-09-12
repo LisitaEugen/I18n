@@ -20,6 +20,25 @@ class I18nViewModel: ObservableObject {
     let measurementFormatter = MeasurementFormatter()
     let dateFormatter = DateFormatter()
     
+    @Published var selectedTab: Int = 0 {
+        didSet {
+            switch selectedTab {
+            case 0:
+                setLocale("en_US")
+            case 1:
+                setLocale("ru_RU")
+            case 2:
+                setLocale("ja_JP")
+            default:
+                setLocale("en_US")
+            }
+        }
+    }
+
+    func setLocale(_ localeIdentifier: String) {
+        locale = Locale(identifier: localeIdentifier)
+    }
+
     var formattedNumber: String? {
         numberFormatter.locale = locale
         numberFormatter.numberStyle = .decimal

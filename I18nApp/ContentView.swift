@@ -9,40 +9,43 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectedTab = 1
+    @EnvironmentObject var viewModel: I18nViewModel
+
     var body: some View {
-        TabView(selection: $selectedTab) {
-            I18nView(locale: "en_US")
-            .tabItem {
-                Image(systemName: "book")
-                Text("RU")
-            }
-            I18nView(locale: "en_US")
+        TabView(selection: $viewModel.selectedTab) {
+            I18nView()
             .tabItem {
                 Image(systemName: "book")
                 Text("EN")
             }
-            I18nView(locale: "ja_JP")
+            .tag(0)
+            I18nView()
+            .tabItem {
+                Image(systemName: "book")
+                Text("RU")
+            }
+            .tag(1)
+            I18nView()
             .tabItem {
                 Image(systemName: "book")
                 Text("JP")
             }
+            .tag(2)
         }
     }
 }
 
 struct I18nView: View {
-    var locale: String
     @EnvironmentObject var viewModel: I18nViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20.0) {
             Text("Number: \(viewModel.formattedNumber ?? "")")
             Text("Currency: \(viewModel.formattedPrice ?? "")")
-            Text("Date: \(viewModel.formattedDate ?? "fghj")")
-            Text("Pressure: \(viewModel.formattedPressure ?? "ghjk")")
+            Text("Date: \(viewModel.formattedDate ?? "")")
+            Text("Pressure: \(viewModel.formattedPressure ?? "")")
             Spacer()
-        }.padding()
+        }
     }
 }
 
