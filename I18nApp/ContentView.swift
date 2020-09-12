@@ -33,13 +33,14 @@ struct ContentView: View {
 
 struct I18nView: View {
     var locale: String
+    @EnvironmentObject var viewModel: I18nViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20.0) {
-            Text("Date")
-            Text("Number")
-            Text("Speed")
-            Text("Currency")
+            Text("Number: \(viewModel.formattedNumber ?? "")")
+            Text("Currency: \(viewModel.formattedPrice ?? "")")
+            Text("Date: \(viewModel.formattedDate ?? "fghj")")
+            Text("Pressure: \(viewModel.formattedPressure ?? "ghjk")")
             Spacer()
         }.padding()
     }
@@ -47,6 +48,6 @@ struct I18nView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(I18nViewModel())
     }
 }

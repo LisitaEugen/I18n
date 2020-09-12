@@ -14,6 +14,7 @@
 		DEB3DAFF250D5695001697EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB3DAFE250D5695001697EF /* Preview Assets.xcassets */; };
 		DEB3DB02250D5695001697EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB3DB00250D5695001697EF /* LaunchScreen.storyboard */; };
 		DEB3DB0D250D5695001697EF /* I18nAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB3DB0C250D5695001697EF /* I18nAppTests.swift */; };
+		DEB3DB18250D6009001697EF /* I18nViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB3DB17250D6009001697EF /* I18nViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		DEB3DB08250D5695001697EF /* I18nAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = I18nAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB3DB0C250D5695001697EF /* I18nAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I18nAppTests.swift; sourceTree = "<group>"; };
 		DEB3DB0E250D5695001697EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEB3DB17250D6009001697EF /* I18nViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I18nViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				DEB3DAF5250D5693001697EF /* AppDelegate.swift */,
 				DEB3DAF7250D5693001697EF /* SceneDelegate.swift */,
 				DEB3DAF9250D5693001697EF /* ContentView.swift */,
+				DEB3DB17250D6009001697EF /* I18nViewModel.swift */,
 				DEB3DAFB250D5695001697EF /* Assets.xcassets */,
 				DEB3DB00250D5695001697EF /* LaunchScreen.storyboard */,
 				DEB3DB03250D5695001697EF /* Info.plist */,
@@ -210,6 +213,7 @@
 			files = (
 				DEB3DAF6250D5693001697EF /* AppDelegate.swift in Sources */,
 				DEB3DAF8250D5693001697EF /* SceneDelegate.swift in Sources */,
+				DEB3DB18250D6009001697EF /* I18nViewModel.swift in Sources */,
 				DEB3DAFA250D5693001697EF /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
